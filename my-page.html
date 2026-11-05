@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Healthcare</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111c30;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #dbeafe;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(circle at top right, #164e63, transparent 45%),
+                linear-gradient(135deg, #0b1220, #142b48);
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 65px);
+            margin-bottom: 20px;
+            max-width: 850px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #b8c8dc;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #0ea5e9;
+            transform: translateY(-3px);
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            color: #bdc9d8;
+        }
+
+        /* Cards */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #17263c;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #263d59;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .card .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #7dd3fc;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #bdc9d8;
+            font-size: 14px;
+        }
+
+        /* Benefits and Challenges */
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-box {
+            background: #17263c;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .info-box h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .info-box li {
+            color: #bdc9d8;
+            margin: 10px 0 10px 20px;
+        }
+
+        /* Conclusion */
+
+        .conclusion {
+            text-align: center;
+            background: linear-gradient(135deg, #12334b, #0b1220);
+        }
+
+        .conclusion p {
+            max-width: 750px;
+            margin: 20px auto;
+            color: #bdc9d8;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111c30;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* Mobile Layout */
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MEDTECH AI</div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#applications">Applications</a>
+            <a href="#challenges">Challenges</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <h1>
+            The Future of Healthcare Is
+            <span>Intelligent.</span>
+        </h1>
+
+        <p>
+            Discover how Artificial Intelligence is transforming
+            modern medicine, improving diagnosis and helping
+            healthcare professionals save lives.
+        </p>
+
+        <a href="#about" class="button">Explore AI</a>
+    </header>
+
+    <!-- Introduction -->
+    <section id="about">
+        <h2 class="section-title">What Is AI in Healthcare?</h2>
+
+        <p class="intro">
+            Artificial Intelligence in healthcare refers to the use
+            of computer systems and machine learning algorithms
+            to analyse medical data, support clinical decisions
+            and improve patient care.
+            It is becoming an important part of modern medicine.
+        </p>
+    </section>
+
+    <!-- Applications -->
+    <section id="applications">
+        <h2 class="section-title">Applications of AI</h2>
+
+        <p class="intro">
+            AI is already being used in different areas
+            of healthcare and medical research.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Medical Diagnosis</h3>
+                <p>
+                    AI can analyse medical information and help
+                    doctors identify possible diseases earlier.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔬</div>
+                <h3>Medical Imaging</h3>
+                <p>
+                    Machine learning can assist in analysing
+                    X-rays, MRI scans and CT images.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💊</div>
+                <h3>Drug Discovery</h3>
+                <p>
+                    AI can help researchers study molecules
+                    and accelerate the development of medicines.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">❤️</div>
+                <h3>Patient Monitoring</h3>
+                <p>
+                    Intelligent systems can monitor health data
+                    and help identify potential warning signs.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Benefits and Challenges -->
+    <section id="challenges">
+        <h2 class="section-title">Benefits & Challenges</h2>
+
+        <div class="two-columns">
+
+            <div class="info-box">
+                <h3>✓ Benefits</h3>
+                <ul>
+                    <li>Faster medical data analysis</li>
+                    <li>Support for early diagnosis</li>
+                    <li>Improved healthcare efficiency</li>
+                    <li>More personalised treatment support</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>! Challenges</h3>
+                <ul>
+                    <li>Patient data privacy</li>
+                    <li>Potential AI errors</li>
+                    <li>Algorithmic bias</li>
+                    <li>Need for human supervision</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <h2 class="section-title">The Future of Medicine</h2>
+
+        <p>
+            Artificial Intelligence has great potential to improve
+            healthcare. However, AI should support medical
+            professionals rather than replace human judgement.
+            A responsible combination of technology and
+            human expertise can create a better future for medicine.
+        </p>
+
+        <a href="#home" class="button">Back to Top</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 MEDTECH AI | AI in Healthcare Project</p>
+        <p>Technology for a Healthier Future.</p>
+    </footer>
+
+</body>
+</html>
